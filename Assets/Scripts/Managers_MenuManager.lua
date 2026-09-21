@@ -4,7 +4,8 @@ local Managers_MenuManager =
     startAsked = false,
     jukebox = nil,
     delay = 5,
-    elapsed = 0
+    elapsed = 0,
+    SoundVolume = 7,
 }
 
 function Managers_MenuManager:OnStart()
@@ -22,7 +23,7 @@ function Managers_MenuManager:OnUpdate(deltaTime)
 
     if self.startAsked then
         self.elapsed = self.elapsed + deltaTime
-        self.jukebox:SetVolume(self.delay - self.elapsed)
+        self.jukebox:SetVolume(self.SoundVolume)
         if self.elapsed >= self.delay then
             Scenes.Load("Scenes\\Scenario.ovscene")
         end

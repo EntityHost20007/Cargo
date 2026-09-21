@@ -6,25 +6,11 @@
                 <tag></tag>
                 <active>true</active>
                 <id>3</id>
+                <guid>7901081455189868280</guid>
+                <prefab_source></prefab_source>
+                <prefab_node_guid>0</prefab_node_guid>
                 <parent>0</parent>
                 <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CCamera</type>
-                        <data>
-                            <fov>45</fov>
-                            <size>45</size>
-                            <near>0.1</near>
-                            <far>1000</far>
-                            <clear_color>
-                                <x>0</x>
-                                <y>3.889017e-07</y>
-                                <z>1e-06</z>
-                            </clear_color>
-                            <frustum_geometry_culling>true</frustum_geometry_culling>
-                            <frustum_light_culling>true</frustum_light_culling>
-                            <projection_mode>1</projection_mode>
-                        </data>
-                    </component>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
@@ -46,6 +32,23 @@
                             </scale>
                         </data>
                     </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CCamera</type>
+                        <data>
+                            <fov>45</fov>
+                            <size>45</size>
+                            <near>0.1</near>
+                            <far>1000</far>
+                            <clear_color>
+                                <x>0</x>
+                                <y>3.889017e-07</y>
+                                <z>1e-06</z>
+                            </clear_color>
+                            <frustum_geometry_culling>true</frustum_geometry_culling>
+                            <frustum_light_culling>true</frustum_light_culling>
+                            <projection_mode>1</projection_mode>
+                        </data>
+                    </component>
                 </components>
                 <behaviours/>
             </actor>
@@ -54,29 +57,11 @@
                 <tag></tag>
                 <active>true</active>
                 <id>6</id>
+                <guid>12460121412698414631</guid>
+                <prefab_source></prefab_source>
+                <prefab_node_guid>0</prefab_node_guid>
                 <parent>3</parent>
                 <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CModelRenderer</type>
-                        <data>
-                            <model>:Models\Plane.fbx</model>
-                            <frustum_behaviour>0</frustum_behaviour>
-                            <custom_bounding_sphere_position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </custom_bounding_sphere_position>
-                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CMaterialRenderer</type>
-                        <data>
-                            <materials>
-                                <material>UI\UI_SpaceBackground.ovmat</material>
-                            </materials>
-                        </data>
-                    </component>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
@@ -98,6 +83,28 @@
                             </scale>
                         </data>
                     </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CModelRenderer</type>
+                        <data>
+                            <model>:Models\Plane.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CMaterialRenderer</type>
+                        <data>
+                            <materials>
+                                <material>UI\UI_SpaceBackground.ovmat</material>
+                            </materials>
+                            <visibility_flags>7</visibility_flags>
+                        </data>
+                    </component>
                 </components>
                 <behaviours/>
             </actor>
@@ -106,8 +113,32 @@
                 <tag></tag>
                 <active>true</active>
                 <id>7</id>
+                <guid>16616781381320004672</guid>
+                <prefab_source></prefab_source>
+                <prefab_node_guid>0</prefab_node_guid>
                 <parent>3</parent>
                 <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
@@ -127,8 +158,22 @@
                             <materials>
                                 <material>UI\Menu\UI_Title.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Start Message</name>
+                <tag></tag>
+                <active>true</active>
+                <id>9</id>
+                <guid>16138945911112555729</guid>
+                <prefab_source></prefab_source>
+                <prefab_node_guid>0</prefab_node_guid>
+                <parent>3</parent>
+                <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
@@ -150,22 +195,13 @@
                             </scale>
                         </data>
                     </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Start Message</name>
-                <tag></tag>
-                <active>true</active>
-                <id>9</id>
-                <parent>3</parent>
-                <components>
                     <component>
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
                                 <material>UI\Menu\UI_StartMessage.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -181,27 +217,6 @@
                             <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
                 </components>
                 <behaviours/>
             </actor>
@@ -210,6 +225,9 @@
                 <tag></tag>
                 <active>true</active>
                 <id>10</id>
+                <guid>18264616916398546062</guid>
+                <prefab_source></prefab_source>
+                <prefab_node_guid>0</prefab_node_guid>
                 <parent>0</parent>
                 <components>
                     <component>
@@ -246,22 +264,11 @@
                 <tag></tag>
                 <active>true</active>
                 <id>11</id>
+                <guid>6002206226361636585</guid>
+                <prefab_source></prefab_source>
+                <prefab_node_guid>0</prefab_node_guid>
                 <parent>0</parent>
                 <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </color>
-                            <intensity>100</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>0.115</quadratic>
-                        </data>
-                    </component>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
@@ -283,6 +290,20 @@
                             </scale>
                         </data>
                     </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CPointLight</type>
+                        <data>
+                            <color>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </color>
+                            <intensity>100</intensity>
+                            <constant>0</constant>
+                            <linear>0</linear>
+                            <quadratic>0.115</quadratic>
+                        </data>
+                    </component>
                 </components>
                 <behaviours/>
             </actor>
@@ -291,6 +312,9 @@
                 <tag></tag>
                 <active>true</active>
                 <id>12</id>
+                <guid>7866512047522426777</guid>
+                <prefab_source></prefab_source>
+                <prefab_node_guid>0</prefab_node_guid>
                 <parent>0</parent>
                 <components>
                     <component>
@@ -327,8 +351,32 @@
                 <tag></tag>
                 <active>false</active>
                 <id>13</id>
+                <guid>14005107992477719565</guid>
+                <prefab_source></prefab_source>
+                <prefab_node_guid>0</prefab_node_guid>
                 <parent>3</parent>
                 <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
@@ -348,8 +396,22 @@
                             <materials>
                                 <material>UI\UI_CameraWhiteFade.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Camera Black Fade</name>
+                <tag></tag>
+                <active>false</active>
+                <id>14</id>
+                <guid>1081807278645566044</guid>
+                <prefab_source></prefab_source>
+                <prefab_node_guid>0</prefab_node_guid>
+                <parent>3</parent>
+                <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
@@ -371,22 +433,13 @@
                             </scale>
                         </data>
                     </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Camera Black Fade</name>
-                <tag></tag>
-                <active>false</active>
-                <id>14</id>
-                <parent>3</parent>
-                <components>
                     <component>
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
                                 <material>UI\UI_CameraBlackFade.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -402,6 +455,19 @@
                             <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Jukebox</name>
+                <tag></tag>
+                <active>true</active>
+                <id>15</id>
+                <guid>2816511389595849753</guid>
+                <prefab_source></prefab_source>
+                <prefab_node_guid>0</prefab_node_guid>
+                <parent>0</parent>
+                <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
@@ -423,16 +489,6 @@
                             </scale>
                         </data>
                     </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Jukebox</name>
-                <tag></tag>
-                <active>true</active>
-                <id>15</id>
-                <parent>0</parent>
-                <components>
                     <component>
                         <type>class OvCore::ECS::Components::CAudioSource</type>
                         <data>
@@ -446,6 +502,19 @@
                             <audio_clip>Sounds\Menu_Ambient.ogg</audio_clip>
                         </data>
                     </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Post Process Stack</name>
+                <tag></tag>
+                <active>true</active>
+                <id>16</id>
+                <guid>11075569366038754077</guid>
+                <prefab_source></prefab_source>
+                <prefab_node_guid>0</prefab_node_guid>
+                <parent>0</parent>
+                <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
@@ -467,16 +536,6 @@
                             </scale>
                         </data>
                     </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Post Process Stack</name>
-                <tag></tag>
-                <active>true</active>
-                <id>16</id>
-                <parent>0</parent>
-                <components>
                     <component>
                         <type>class OvCore::ECS::Components::CPostProcessStack</type>
                         <data>
@@ -496,27 +555,6 @@
                             <tonemapping_mode>0</tonemapping_mode>
                             <tonemapping_gamma_correction>true</tonemapping_gamma_correction>
                             <fxaa_enabled>true</fxaa_enabled>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
                         </data>
                     </component>
                 </components>

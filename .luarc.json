@@ -1,5 +1,5 @@
 {
-  "workspace.library": ["/home/adrien/GitHub/Overload/Build/Debug/Data/Engine"],
+  "workspace.library": ["D:\A_OverloadGameEngine\Overload-1.9\Overload-1.9-windows_x64\Data\Engine"],
   "runtime.version": "Lua 5.4",
   "runtime.builtin": {
     "basic": "enable",
