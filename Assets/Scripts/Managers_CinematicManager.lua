@@ -7,6 +7,9 @@ local Managers_CinematicManager = {
 	whiteLightSecondGroup = nil,
 	cameraFadeManager = nil,
 	playerCapsule = nil,
+    LightIni = 0,
+
+
 }
 
 function Managers_CinematicManager:OnAwake()
@@ -14,13 +17,13 @@ function Managers_CinematicManager:OnAwake()
 	self.ambientRedLight = Scenes.GetCurrentScene():FindActorByName("Ambient Red"):GetLight()
 	self.whiteLightFirstGroup = Scenes.GetCurrentScene():FindActorsByTag("WhiteLight1")
 	self.whiteLightSecondGroup = Scenes.GetCurrentScene():FindActorsByTag("WhiteLight2")
-	self.cameraFadeManager =
-		Scenes.GetCurrentScene():FindActorByName("Camera Fade Manager"):GetBehaviour("Managers_CameraFade")
+	self.cameraFadeManager = Scenes.GetCurrentScene():FindActorByName("Camera Fade Manager"):GetBehaviour("Managers_CameraFade")
 	self.playerCapsule = Scenes:GetCurrentScene():FindActorByName("Player"):GetPhysicalCapsule()
 end
 
 function Managers_CinematicManager:OnUpdate(deltaTime)
 	self.elasped = self.elasped + deltaTime
+	self.LightIni = self.LightIni + deltaTime
 	if self.cineStep < 1 then -- Clignote
 		self.cameraFadeManager:FadeBlack(1, 0)
 		self.cineStep = 1
@@ -43,29 +46,24 @@ function Managers_CinematicManager:OnUpdate(deltaTime)
 		self.playerCapsule:AddImpulse(Vector3.new(0, 15, 0))
 		self.playerCapsule:SetLinearFactor(Vector3.new(1, 0.05, 1))
 		self.cineStep = 5
-	end
+end
 
 	if self.cineStep == 1 then
-		self.ambientRedLight:SetIntensity((math.sin(self.elasped * 5.0) + 1) / 4)
+		self.ambientRedLight:SetIntensity((math.sin(self.LightIni * 5.0) + 1) / 4)
 	elseif self.cineStep == 2 then
-		self.ambientRedLight:SetIntensity((math.sin(self.elasped * 10.0) + 1) / 3)
+		self.ambientRedLight:SetIntensity((math.sin(self.LightIni * 10.0) + 1) / 3)
 		for id, light in pairs(self.whiteLightFirstGroup) do
 			light:GetPointLight():SetIntensity(Math.Lerp(light:GetPointLight():GetIntensity(), 0.0, 20 * deltaTime))
 		end
 	elseif self.cineStep == 3 then
-		self.ambientRedLight:SetIntensity((math.sin(self.elasped * 15.0) + 1) / 3)
+		self.ambientRedLight:SetIntensity((math.sin(self.LightIni * 15.0) + 1) / 3)
 		for id, light in pairs(self.whiteLightSecondGroup) do
-			light:GetPointLight():SetIntensity((math.sin(self.elasped * 20.0) + 1) / 3)
+			light:GetPointLight():SetIntensity((math.sin(self.LightIni * 20.0) + 1) / 3)
 		end
-	elseif self.cineStep == 3 then
-		self.ambientRedLight:SetIntensity((math.sin(self.elasped * 15.0) + 1) / 3)
-		for id, light in pairs(self.whiteLightSecondGroup) do
-			light:GetPointLight():SetIntensity(Math.Lerp(light:GetPointLight():GetIntensity(), 0.2, 20 * deltaTime))
-		end
-	elseif self.cineStep == 4 or self.cinestep == 5 then
-		self.ambientRedLight:SetIntensity((math.sin(self.elasped * 10.0) + 1) / 3)
+	elseif self.cineStep == 4 then
+		self.ambientRedLight:SetIntensity((math.sin(self.LightIni * 10.0) + 1) / 3)
 		for id, light in pairs(self.whiteLightFirstGroup) do
-			light:GetPointLight():SetIntensity((math.sin(self.elasped * 20.0) + 1) / 3)
+			light:GetPointLight():SetIntensity((math.sin(self.LightIni * 20.0) + 1) / 3)
 		end
 	end
 
