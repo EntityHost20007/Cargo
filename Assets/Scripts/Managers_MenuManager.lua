@@ -5,7 +5,7 @@ local Managers_MenuManager =
     jukebox = nil,
     delay = 5,
     elapsed = 0,
-    SoundVolume = 7,
+    SoundVolume = 3,
 }
 
 function Managers_MenuManager:OnStart()

@@ -499,7 +499,7 @@
                             <looped>true</looped>
                             <pitch>1</pitch>
                             <attenuation_threshold>1</attenuation_threshold>
-                            <audio_clip>Sounds\Menu_Ambient.ogg</audio_clip>
+                            <audio_clip>Sounds/Music/TitleScreenMusic-Final.ogg</audio_clip>
                         </data>
                     </component>
                 </components>
