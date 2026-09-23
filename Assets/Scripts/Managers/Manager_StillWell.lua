@@ -12,8 +12,9 @@ local Manager_StillWell =
 
 function Manager_StillWell:OnStart()
     self.VoiceSource = Resources.GetSound("Sounds\\Door_Close.ogg")
-    self.SoundPlaceHolder = self.owner:GetAudioSource()
+    self.SoundPlaceHolder = Scenes.GetCurrentScene():FindActorByName("StillWellVoice"):GetAudioSource()
     self.SoundPlaceHolder:SetSound(self.VoiceSource)
+    
 end
 
 function Manager_StillWell:OnTriggerEnter(other)
