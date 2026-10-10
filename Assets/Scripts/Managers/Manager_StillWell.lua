@@ -28,10 +28,11 @@ function Manager_StillWell:OnTriggerEnter(other)
 end  
 
 function Manager_StillWell:OnUpdate(deltaTime)
-    self.elapsed = self.elapsed + deltaTime
+    
 
     if self.StartCut == true then
-        if self.elapsed > 5 and self.cutstep < 1 then
+       self.elapsed = self.elapsed + deltaTime
+    if self.elapsed > 5 and self.cutstep < 1 then
             self.AnimPlaceHolder:Stop()
             Debug.Log("Hello, I've been expecting you.")
             self.cutstep = 1

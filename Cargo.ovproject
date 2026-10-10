@@ -1,12 +1,12 @@
-build_type=0
 samples=4
+build_type=2
+y_resolution=720
 window_icon=
 vsync=true
-start_scene=Scenes/Game.ovscene
-resizable=false
 fullscreen=false
+start_scene=Scenes/Menu.ovscene
+resizable=false
 executable_name=Game
-y_resolution=720
 multisampling=false
 x_resolution=1280
 gravity=-9.810000
